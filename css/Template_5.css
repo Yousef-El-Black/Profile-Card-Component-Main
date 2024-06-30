@@ -1,0 +1,130 @@
+/* Start Variables */
+
+:root {
+    --main-font-family: 'Kumbh Sans', sans-serif;
+    --background-color: hsl(185, 75%, 39%);
+    --main-color: hsl(229, 23%, 23%);
+    --paragraph-color: hsl(227, 10%, 46%);
+    --secondary-color: hsl(0, 0%, 59%);
+    --name-and-state-font-size: 18px;
+    --margin: 250px;
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (max-width:767px) {
+    .container {
+        height: auto;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+body {
+    font-family: var(--main-font-family);
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+
+
+/* End Components */
+
+/* Start Project */
+
+.page {
+    background-color: var(--background-color);
+    background-image: url(../Images/bg-pattern-top.svg) , url(../Images/bg-pattern-bottom.svg);
+    background-size: cover;
+}
+
+.page .card {
+    position: relative;
+    background-color: white;
+    width: 350px;
+    height: 60%;
+    border-radius: 15px;
+    padding-bottom: 35px;
+}
+
+@media (max-width:767px) {
+    .card {
+        margin-top: var(--margin);
+        margin-bottom: var(--margin);
+    }
+}
+
+.card .image {
+    position: relative;
+}
+
+.card .image .pattern {
+    border-radius: 15px 15px 0 0;
+}
+
+@media (max-width:767px) {
+    .pattern {
+        width: 300px;
+    }
+}
+
+.card .victor {
+    position: absolute;
+    border: 5px solid white;
+    border-radius: 50%;
+    top: calc(100% - 48px);
+    left: calc(50% - (96px / 2));
+}
+
+.heading {
+    font-size: var(--name-and-state-font-size);
+    position: absolute;
+    top: 45%;
+    left: calc(50%  - 75px);
+    text-align: center;
+}
+
+.heading h3 {
+    color: black;
+}
+
+.heading h3 span {
+    color: var(--paragraph-color);
+    font-weight: 400;
+}
+
+.heading h3 + p {
+    color: var(--main-color);
+}
+
+header {
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 50%;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: space-around;
+}
+
+.box {
+    text-align: center;
+}
+
+.box h4 + p {
+    font-size: 15px;
+}
